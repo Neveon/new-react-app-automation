@@ -62,9 +62,10 @@ try:
     print("Error with one of the following commands:\n'git remote add origin https://github.com/{}.git'\n'git push -u origin master'".format(repo.full_name))
     print("NOTE: You can't push to remote until it is added properly")
 
-  # open project in editor
+  # open project in editor and run script
   try:
     subprocess.call("{} .".format(editor), shell=True)
+    subprocess.call("npm start", shell=True)
   except Exception as e:
     print("No editor called {} found\n{}".format(editor, str(e)))
 
