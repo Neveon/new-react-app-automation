@@ -1,5 +1,4 @@
 import os
-import sys
 import subprocess
 from configparser import ConfigParser
 import project_create
