@@ -17,12 +17,12 @@ editor = config.get('DEFAULT', 'editor')
 project_name = input('Project name: ')
 repo_name = input('Repository name: ')
 
-def CreateProject():
-  project_create.Init(project_name, repo_name)
-
 # Following is false if project_name does not exist yet
 while os.path.isdir(directory + '/' + project_name):
   project_name = input("Project name already exists, please enter a new name: ")
+
+def CreateProject():
+  project_create.Init(project_name, repo_name)
 
 try:
   # changes into correct directory and runs the project creation process
